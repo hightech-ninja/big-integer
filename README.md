@@ -18,6 +18,13 @@ Also it's a global function to_string and ostream<< operator for output and othe
 ## Some words about implementation
 * Digit is a 32-bit integer;
 * You can read about division algorithm [here](https://surface.syr.edu/cgi/viewcontent.cgi?article=1162&context=eecs_techreports), it's rather interesting and a little bit faster than binary search. But for more optimization it is better to use Karatsuba algorithm(just fork me!).
+* You need google test library to run tests
+## Running and building
+```~>> git clone https://github.com/not-potato/big-integer
+~>> cd build && cmake ..
+~>> make
+~>> ./big_integer_testing
+```
 
-## Testing
-* You need google test library to compile tests
+* Average time to pass tests with sunitizer and without any optimizations on my computer is 1300ms;
+* The most resource-intensive operations are multiplying and divison;
